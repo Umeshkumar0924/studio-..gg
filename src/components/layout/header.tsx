@@ -12,8 +12,6 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
   { href: '/gallery', label: 'Gallery' },
-  { href: '/style-ai', label: 'Style AI' },
-  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
 
