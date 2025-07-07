@@ -1,6 +1,21 @@
+'use client';
+
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { useToast } from "@/hooks/use-toast";
 import { Banknote, CalendarDays, PlusCircle, Users } from "lucide-react";
 
 const bookings = [
@@ -11,6 +26,49 @@ const bookings = [
 ];
 
 export default function OwnerDashboardPage() {
+    const { toast } = useToast();
+    const [open, setOpen] = useState(false);
+    const [selectedFile, setSelectedFile] = useState<File | null>(null);
+    const [altText, setAltText] = useState('');
+
+    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (event.target.files && event.target.files[0]) {
+            setSelectedFile(event.target.files[0]);
+        }
+    };
+
+    const handleUpload = () => {
+        if (!selectedFile) {
+            toast({
+                variant: "destructive",
+                title: "Upload Failed",
+                description: "Please select a file to upload.",
+            });
+            return;
+        }
+        if (!altText) {
+            toast({
+                variant: "destructive",
+                title: "Upload Failed",
+                description: "Please provide descriptive alt text.",
+            });
+            return;
+        }
+        
+        // In a real app, you would upload the file to a server here.
+        console.log('Uploading file:', selectedFile.name);
+        console.log('Alt text:', altText);
+        toast({
+            title: "Upload Successful!",
+            description: `${selectedFile.name} has been added to the gallery.`,
+        });
+        
+        // Reset state and close dialog
+        setOpen(false);
+        setSelectedFile(null);
+        setAltText('');
+    };
+
     return (
         <div className="bg-background">
             <div className="container mx-auto px-4 py-16">
@@ -90,7 +148,36 @@ export default function OwnerDashboardPage() {
                      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
                         <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Add/Edit Services</Button>
                         <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Add/Edit Staff</Button>
-                        <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Upload to Gallery</Button>
+                        <Dialog open={open} onOpenChange={setOpen}>
+                            <DialogTrigger asChild>
+                                <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Upload to Gallery</Button>
+                            </DialogTrigger>
+                            <DialogContent className="sm:max-w-[425px]">
+                                <DialogHeader>
+                                    <DialogTitle>Upload to Gallery</DialogTitle>
+                                    <DialogDescription>
+                                        Choose an image to showcase in your gallery. Add descriptive alt text for accessibility.
+                                    </DialogDescription>
+                                </DialogHeader>
+                                <div className="grid gap-4 py-4">
+                                    <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="picture" className="text-right">
+                                            Image
+                                        </Label>
+                                        <Input id="picture" type="file" className="col-span-3" onChange={handleFileChange} accept="image/*" />
+                                    </div>
+                                    <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="alt" className="text-right">
+                                            Alt Text
+                                        </Label>
+                                        <Input id="alt" value={altText} onChange={(e) => setAltText(e.target.value)} placeholder="e.g., Elegant long hairstyle" className="col-span-3" />
+                                    </div>
+                                </div>
+                                <DialogFooter>
+                                    <Button onClick={handleUpload}>Upload</Button>
+                                </DialogFooter>
+                            </DialogContent>
+                        </Dialog>
                         <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Manage Reviews</Button>
                      </div>
                 </section>
