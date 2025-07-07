@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex flex-col">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Scissors className="h-7 w-7 text-accent" />
-              <span className="font-bold text-xl font-headline">Shear Elegance</span>
+              <span className="font-bold text-xl font-headline">By Touch Unisex Saloon</span>
             </Link>
             <p className="text-sm text-primary-foreground/70">
               Crafting beautiful hair, creating beautiful moments.
@@ -29,7 +29,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li>123 Style Avenue, Fashion City, 12345</li>
               <li>(123) 456-7890</li>
-              <li>contact@shearelegance.com</li>
+              <li>contact@bytouchsalon.com</li>
             </ul>
           </div>
           <div>
@@ -42,7 +42,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center text-sm text-primary-foreground/50">
-          <p>&copy; {new Date().getFullYear()} Shear Elegance. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} By Touch Unisex Saloon. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

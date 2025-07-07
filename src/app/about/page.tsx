@@ -8,7 +8,7 @@ const teamMembers = [
     role: 'Founder & Master Stylist',
     avatar: 'https://placehold.co/200x200',
     hint: 'woman portrait',
-    bio: 'With over 20 years of experience, Eleanor founded Shear Elegance with a vision to create a haven of style and luxury. She specializes in precision cutting and timeless looks.',
+    bio: 'With over 20 years of experience, Eleanor founded By Touch Unisex Saloon with a vision to create a haven of style and luxury. She specializes in precision cutting and timeless looks.',
   },
   {
     name: 'Marcus Thorne',
@@ -39,7 +39,7 @@ export default function AboutPage() {
           className="brightness-50" 
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-6xl font-headline font-bold text-white text-center drop-shadow-2xl">About Shear Elegance</h1>
+          <h1 className="text-6xl font-headline font-bold text-white text-center drop-shadow-2xl">About By Touch Unisex Saloon</h1>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-4xl font-headline font-bold text-primary mb-4">Our Story</h2>
             <p className="text-lg text-muted-foreground mb-4">
-              Shear Elegance was born from a simple idea: that everyone deserves to feel beautiful and confident. Founded in 2010, our salon has grown into a premier destination for those seeking exceptional hair care in a welcoming and luxurious environment.
+              By Touch Unisex Saloon was born from a simple idea: that everyone deserves to feel beautiful and confident. Founded in 2010, our salon has grown into a premier destination for those seeking exceptional hair care in a welcoming and luxurious environment.
             </p>
             <p className="text-lg text-muted-foreground">
               We are a team of passionate, skilled professionals who are committed to the art of hairdressing. We stay at the forefront of the latest trends and techniques to provide you with the very best service.

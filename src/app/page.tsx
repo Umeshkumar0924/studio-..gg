@@ -25,7 +25,7 @@ const services = [
 
 const testimonials = [
   {
-    quote: "The best haircut I've ever had! The attention to detail and friendly atmosphere at Shear Elegance is unmatched.",
+    quote: "The best haircut I've ever had! The attention to detail and friendly atmosphere at By Touch Unisex Saloon is unmatched.",
     name: 'Jessica M.',
     avatar: 'https://placehold.co/100x100',
   },
@@ -65,7 +65,7 @@ export default function Home() {
             Experience the Art of Hair
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
-            At Shear Elegance, we blend creativity with precision to give you a look that is uniquely you.
+            At By Touch Unisex Saloon, we blend creativity with precision to give you a look that is uniquely you.
           </p>
           <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg py-7 px-10">
             <Link href="/booking">Book an Appointment</Link>
@@ -77,9 +77,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-4xl font-headline font-bold mb-4 text-primary">Welcome to Shear Elegance</h2>
+              <h2 className="text-4xl font-headline font-bold mb-4 text-primary">Welcome to By Touch Unisex Saloon</h2>
               <p className="mb-6 text-lg">
-                Nestled in the heart of the city, Shear Elegance is more than just a salon—it's a sanctuary of style. Our philosophy is built on the belief that a great haircut can empower and inspire. We are dedicated to providing a personalized and luxurious experience for every client.
+                Nestled in the heart of the city, By Touch Unisex Saloon is more than just a salon—it's a sanctuary of style. Our philosophy is built on the belief that a great haircut can empower and inspire. We are dedicated to providing a personalized and luxurious experience for every client.
               </p>
               <Button asChild variant="outline">
                 <Link href="/about">Learn More About Us</Link>
