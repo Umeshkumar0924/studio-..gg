@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Scissors, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
@@ -86,6 +86,7 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
+            <SheetTitle className="sr-only">Menu</SheetTitle>
             <div className="flex h-full flex-col gap-6 p-6">
               <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setIsOpen(false)}>
                 <Scissors className="h-7 w-7 text-primary" />
