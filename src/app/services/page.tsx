@@ -7,28 +7,28 @@ const serviceList = [
   {
     category: 'Haircuts & Styling',
     items: [
-      { name: 'Women\'s Haircut', price: '75+', duration: '60 min' },
-      { name: 'Men\'s Haircut', price: '50+', duration: '45 min' },
-      { name: 'Blowout & Style', price: '55+', duration: '45 min' },
-      { name: 'Updo / Special Occasion', price: '95+', duration: '75 min' },
+      { name: 'Women\'s Haircut', price: '750+', duration: '60 min' },
+      { name: 'Men\'s Haircut', price: '500+', duration: '45 min' },
+      { name: 'Blowout & Style', price: '550+', duration: '45 min' },
+      { name: 'Updo / Special Occasion', price: '950+', duration: '75 min' },
     ]
   },
   {
     category: 'Color Services',
     items: [
-      { name: 'Single Process Color', price: '120+', duration: '2 hours' },
-      { name: 'Partial Highlights', price: '180+', duration: '2.5 hours' },
-      { name: 'Full Highlights', price: '250+', duration: '3 hours' },
-      { name: 'Balayage / Ombré', price: '300+', duration: '3.5 hours' },
-      { name: 'Gloss / Toner', price: '60+', duration: '30 min' },
+      { name: 'Single Process Color', price: '1200+', duration: '2 hours' },
+      { name: 'Partial Highlights', price: '1800+', duration: '2.5 hours' },
+      { name: 'Full Highlights', price: '2500+', duration: '3 hours' },
+      { name: 'Balayage / Ombré', price: '3000+', duration: '3.5 hours' },
+      { name: 'Gloss / Toner', price: '600+', duration: '30 min' },
     ]
   },
   {
     category: 'Treatments',
     items: [
-      { name: 'Deep Conditioning Treatment', price: '45+', duration: '30 min' },
-      { name: 'Keratin Smoothing Treatment', price: '350+', duration: '3 hours' },
-      { name: 'Scalp Treatment', price: '65+', duration: '45 min' },
+      { name: 'Deep Conditioning Treatment', price: '450+', duration: '30 min' },
+      { name: 'Keratin Smoothing Treatment', price: '3500+', duration: '3 hours' },
+      { name: 'Scalp Treatment', price: '650+', duration: '45 min' },
     ]
   }
 ];
@@ -55,7 +55,7 @@ export default function ServicesPage() {
                       <CardTitle className="font-headline text-2xl">{item.name}</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow">
-                      <p className="text-3xl font-sans font-bold text-primary">${item.price}</p>
+                      <p className="text-3xl font-sans font-bold text-primary">₹{item.price}</p>
                       <p className="text-sm text-muted-foreground mt-2">Approx. {item.duration}</p>
                     </CardContent>
                     <CardFooter>
