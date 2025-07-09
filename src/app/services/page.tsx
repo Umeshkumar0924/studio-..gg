@@ -1,37 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
+import { serviceList } from '@/lib/data';
 import Link from 'next/link';
-
-const serviceList = [
-  {
-    category: 'Haircuts & Styling',
-    items: [
-      { name: 'Women\'s Haircut', price: '750+', duration: '60 min' },
-      { name: 'Men\'s Haircut', price: '500+', duration: '45 min' },
-      { name: 'Blowout & Style', price: '550+', duration: '45 min' },
-      { name: 'Updo / Special Occasion', price: '950+', duration: '75 min' },
-    ]
-  },
-  {
-    category: 'Color Services',
-    items: [
-      { name: 'Single Process Color', price: '1200+', duration: '2 hours' },
-      { name: 'Partial Highlights', price: '1800+', duration: '2.5 hours' },
-      { name: 'Full Highlights', price: '2500+', duration: '3 hours' },
-      { name: 'Balayage / Ombré', price: '3000+', duration: '3.5 hours' },
-      { name: 'Gloss / Toner', price: '600+', duration: '30 min' },
-    ]
-  },
-  {
-    category: 'Treatments',
-    items: [
-      { name: 'Deep Conditioning Treatment', price: '450+', duration: '30 min' },
-      { name: 'Keratin Smoothing Treatment', price: '3500+', duration: '3 hours' },
-      { name: 'Scalp Treatment', price: '650+', duration: '45 min' },
-    ]
-  }
-];
 
 export default function ServicesPage() {
   return (

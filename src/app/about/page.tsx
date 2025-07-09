@@ -1,37 +1,14 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { teamMembers } from '@/lib/data';
 import Image from 'next/image';
-
-const teamMembers = [
-  {
-    name: 'Eleanor Vance',
-    role: 'Founder & Master Stylist',
-    avatar: 'https://placehold.co/200x200',
-    hint: 'woman portrait',
-    bio: 'With over 20 years of experience, Eleanor founded By Touch Unisex Saloon with a vision to create a haven of style and luxury. She specializes in precision cutting and timeless looks.',
-  },
-  {
-    name: 'Marcus Thorne',
-    role: 'Lead Colorist',
-    avatar: 'https://placehold.co/200x200',
-    hint: 'man portrait',
-    bio: 'Marcus is an artist with color. From subtle balayage to bold, vibrant transformations, he brings a creative flair and technical expertise to every client.',
-  },
-  {
-    name: 'Clara Belle',
-    role: 'Styling & Treatments Specialist',
-    avatar: 'https://placehold.co/200x200',
-    hint: 'woman smiling',
-    bio: 'Clara has a passion for hair health and special occasion styling. She ensures every client leaves with hair that not only looks great but feels amazing too.',
-  },
-];
 
 export default function AboutPage() {
   return (
     <div className="bg-background">
       <div className="relative h-80">
         <Image 
-          src="https://placehold.co/1920x600" 
+          src="https://placehold.co/1920x600.png" 
           alt="Salon interior" 
           data-ai-hint="salon interior"
           layout="fill" 
@@ -56,7 +33,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image 
-              src="https://placehold.co/600x400" 
+              src="https://placehold.co/600x400.png" 
               alt="Salon team working" 
               data-ai-hint="hairstylists working"
               width={600}

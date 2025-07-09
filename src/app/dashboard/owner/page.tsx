@@ -16,7 +16,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useToast } from "@/hooks/use-toast";
-import { Banknote, CalendarDays, PlusCircle, Users } from "lucide-react";
+import { Banknote, CalendarDays, PlusCircle, Users, MessageSquare, ListPlus } from "lucide-react";
+import Link from "next/link";
 
 const bookings = [
     { date: 'Jul 7, 2024', service: 'Haircut', time: '11:00 AM', customer: 'Akash', staff: 'Rahul' },
@@ -146,8 +147,8 @@ export default function OwnerDashboardPage() {
                 <section id="management">
                     <h2 className="text-2xl font-headline font-bold text-primary mb-4">Management</h2>
                      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-                        <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Add/Edit Services</Button>
-                        <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Add/Edit Staff</Button>
+                        <Button asChild variant="outline"><Link href="/dashboard/owner/services"><ListPlus className="mr-2 h-4 w-4" /> Add/Edit Services</Link></Button>
+                        <Button asChild variant="outline"><Link href="/dashboard/owner/staff"><Users className="mr-2 h-4 w-4" /> Add/Edit Staff</Link></Button>
                         <Dialog open={open} onOpenChange={setOpen}>
                             <DialogTrigger asChild>
                                 <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Upload to Gallery</Button>
@@ -178,7 +179,7 @@ export default function OwnerDashboardPage() {
                                 </DialogFooter>
                             </DialogContent>
                         </Dialog>
-                        <Button variant="outline"><PlusCircle className="mr-2 h-4 w-4" /> Manage Reviews</Button>
+                        <Button asChild variant="outline"><Link href="/dashboard/owner/reviews"><MessageSquare className="mr-2 h-4 w-4" /> Manage Reviews</Link></Button>
                      </div>
                 </section>
 

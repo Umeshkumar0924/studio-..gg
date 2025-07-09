@@ -15,6 +15,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
+import { serviceList } from '@/lib/data';
 
 const bookingFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -27,20 +28,7 @@ const bookingFormSchema = z.object({
 
 type BookingFormValues = z.infer<typeof bookingFormSchema>;
 
-const services = [
-  "Women's Haircut",
-  "Men's Haircut",
-  "Blowout & Style",
-  "Updo / Special Occasion",
-  "Single Process Color",
-  "Partial Highlights",
-  "Full Highlights",
-  "Balayage / Ombré",
-  "Gloss / Toner",
-  "Deep Conditioning Treatment",
-  "Keratin Smoothing Treatment",
-  "Scalp Treatment",
-];
+const allServices = serviceList.flatMap(category => category.items.map(item => item.name));
 
 const timeSlots = [
   "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM",
@@ -138,7 +126,7 @@ export default function BookingPage() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            {services.map(service => (
+                            {allServices.map(service => (
                                <SelectItem key={service} value={service}>{service}</SelectItem>
                             ))}
                           </SelectContent>
@@ -200,7 +188,7 @@ export default function BookingPage() {
                             <FormControl>
                               <SelectTrigger>
                                 <SelectValue placeholder="Select a time slot" />
-                              </SelectTrigger>
+                              </Trigger>
                             </FormControl>
                             <SelectContent>
                               {timeSlots.map(time => (
