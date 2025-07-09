@@ -25,7 +25,7 @@ export default function ServicesPage() {
                       <CardTitle className="font-headline text-2xl">{item.name}</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow">
-                      <p className="text-3xl font-sans font-bold text-primary">₹{item.price}</p>
+                      <p className="text-3xl font-sans font-bold text-primary">Rs. {item.price}</p>
                       <p className="text-sm text-muted-foreground mt-2">Approx. {item.duration}</p>
                     </CardContent>
                     <CardFooter>

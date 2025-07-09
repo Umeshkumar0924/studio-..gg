@@ -59,7 +59,7 @@ export default function ManageServicesPage() {
                   </div>
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="price" className="text-right">Price</Label>
-                    <Input id="price" placeholder="e.g., 1500+" className="col-span-3" />
+                    <Input id="price" placeholder="e.g., Rs. 1500+" className="col-span-3" />
                   </div>
                    <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="duration" className="text-right">Duration</Label>
@@ -84,7 +84,7 @@ export default function ManageServicesPage() {
                       <CardTitle className="font-headline text-2xl">{item.name}</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow space-y-2">
-                      <p className="text-3xl font-sans font-bold text-primary">₹{item.price}</p>
+                      <p className="text-3xl font-sans font-bold text-primary">Rs. {item.price}</p>
                       <p className="text-sm text-muted-foreground">Approx. {item.duration}</p>
                     </CardContent>
                     <CardContent>
