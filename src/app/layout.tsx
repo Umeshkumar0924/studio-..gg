@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'By Touch Unisex Saloon',
+  title: 'Shear Elegance',
   description: 'A modern haircut salon website.',
 };
 

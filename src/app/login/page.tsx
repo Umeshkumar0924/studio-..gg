@@ -39,7 +39,7 @@ export default function LoginPage() {
 
     // Simulate API call to check credentials
     setTimeout(() => {
-      if (data.email.toLowerCase() === 'owner@bytouchsalon.com' && data.password === 'admin') {
+      if (data.email.toLowerCase() === 'owner@shearelegance.com' && data.password === 'admin') {
         toast({
           title: 'Login Successful',
           description: 'Redirecting to the owner dashboard...',

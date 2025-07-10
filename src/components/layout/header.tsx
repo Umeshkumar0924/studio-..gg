@@ -32,7 +32,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Scissors className="h-7 w-7 text-primary" />
-          <span className="font-bold text-xl font-headline">By Touch Unisex Saloon</span>
+          <span className="font-bold text-xl font-headline">Shear Elegance</span>
         </Link>
         <nav className="hidden md:flex gap-4 items-center">
           {navLinks.map((link) => (
@@ -90,7 +90,7 @@ export function Header() {
             <div className="flex h-full flex-col gap-6 p-6">
               <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setIsOpen(false)}>
                 <Scissors className="h-7 w-7 text-primary" />
-                <span className="font-bold text-xl font-headline">By Touch Unisex Saloon</span>
+                <span className="font-bold text-xl font-headline">Shear Elegance</span>
               </Link>
               <div className="flex flex-col gap-6">
                 {navLinks.map((link) => (

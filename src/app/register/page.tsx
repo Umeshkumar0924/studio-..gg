@@ -10,7 +10,7 @@ export default function RegisterPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-headline">Create an Account</CardTitle>
-          <CardDescription>Join By Touch Unisex Saloon to book and manage appointments.</CardDescription>
+          <CardDescription>Join Shear Elegance to book and manage appointments.</CardDescription>
         </CardHeader>
         <CardContent>
           <form className="space-y-4">

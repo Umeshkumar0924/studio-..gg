@@ -5,7 +5,7 @@ export const teamMembers = [
     role: 'Founder & Master Stylist',
     avatar: 'https://placehold.co/200x200.png',
     hint: 'woman portrait',
-    bio: 'With over 20 years of experience, Eleanor founded By Touch Unisex Saloon with a vision to create a haven of style and luxury. She specializes in precision cutting and timeless looks.',
+    bio: 'With over 20 years of experience, Eleanor founded Shear Elegance with a vision to create a haven of style and luxury. She specializes in precision cutting and timeless looks.',
   },
   {
     id: 2,
